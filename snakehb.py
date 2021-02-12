@@ -30,7 +30,35 @@ class snake(object):
         self.dirny = 1
 
     def move(self):
-        pass
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+
+            keys == pygame.key.get_pressed()
+            
+            for key in keys:
+                if keys(pygame.K_LEFT):
+                    self.dirnx = -1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+                elif keys(pygame.K_RIGHT):
+                    self.dirnx = 1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+                elif keys(pygame.K_UP):
+                    self.dirnx = 0
+                    self.dirny = -1
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+                elif keys(pygame.K_DOWN):
+                    self.dirnx = 0
+                    self.dirny = 1
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+        for i, c in enumerate(self.body):
+            
+        
 
     def reset(self, pos):
         pass
